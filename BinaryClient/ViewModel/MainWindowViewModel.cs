@@ -254,7 +254,7 @@ namespace BinaryClient.ViewModel
 
             // Open websocket connection to get Market lists for all accounts
             Task.Run(() => Bws.Connect()).Wait();
-            Task.Run(() => Bws.SendRequest("{\"trading_times\":\"2015-09-14\"}")).Wait();
+            Task.Run(() => Bws.SendRequest("{\"trading_times\":\"2022-10-07\"}")).Wait();
             var jsonTradingTimesResponse = Task.Run(() => Bws.StartListen()).Result;
             var tradingTime = JsonConvert.DeserializeObject<TradingTimesResponse>(jsonTradingTimesResponse);
 

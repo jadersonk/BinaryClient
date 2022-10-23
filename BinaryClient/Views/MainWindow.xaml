@@ -13,7 +13,7 @@
     <Window.DataContext>
         <viewModel:MainWindowViewModel/>
     </Window.DataContext>
-    <Grid Background="#FF333333">
+    <Grid Background="#FF333333" Margin="0,0,-53,0">
         <Button x:Name="ButtonCall" Content="CALL" HorizontalAlignment="Left" Margin="330,161,0,0" VerticalAlignment="Top" Width="67" Height="33" Click="buttonCall_Click" Background="#1DA716" Foreground="#DEF5DB" FontWeight="Bold"/>
         <Button x:Name="ButtonPut" Content="PUT" HorizontalAlignment="Left" Margin="330,216,0,0" VerticalAlignment="Top" Width="67" Click="buttonPut_Click" Background="#D71A21" Foreground="#DEF5DB" FontWeight="Bold" Height="33"/>
         <Button x:Name="ButtonAdd" Content="+ Add" HorizontalAlignment="Left" Margin="165,12,0,0" VerticalAlignment="Top" Width="75" Foreground="#ECECEC" Background="#252525" Click="ButtonAdd_Click"/>
@@ -44,6 +44,7 @@
                  TextWrapping="Wrap" VerticalAlignment="Top" Width="45"/>
         <Label x:Name="LabelTime" Content="Time, ms" HorizontalAlignment="Left" Margin="405,282,0,0" VerticalAlignment="Top" Foreground="#ECECEC"/>
         <TextBox x:Name="TextTime" HorizontalAlignment="Left" Height="23" Margin="405,308,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="67" IsReadOnly="True"/>
+        <Button x:Name="ButtonPing" Content="PING" HorizontalAlignment="Left" Margin="568,276,0,0" VerticalAlignment="Top" Width="73" Click="buttonPing_Click" Background="#D71A21" Foreground="#DEF5DB" FontWeight="Bold" Height="22"/>
         <DataGrid x:Name="DataAccounts" HorizontalAlignment="Center" Margin="24,36,20.8,0" VerticalAlignment="Top" Height="104" Width="572" 
                   CanUserAddRows="False" SourceUpdated="DataGrid_SourceUpdated" TargetUpdated="DataGrid_SourceUpdated" AutoGenerateColumns="False">
             <DataGrid.DataContext>
@@ -72,5 +73,7 @@
 			Foreground="#ECECEC" Background="#252525"/>
         <Label x:Name="LabelCall" Content="{Binding Path=CallLabel, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Margin="405,164,0,0" VerticalAlignment="Top" Foreground="#ECECEC"/>
         <Label x:Name="LabelPut" Content="{Binding Path=CallLabel, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Margin="405,219,0,0" VerticalAlignment="Top" Foreground="#ECECEC"/>
+        <Button x:Name="ButtonSubscribe" Content="Subscribe" HorizontalAlignment="Left" Margin="490,276,0,0" VerticalAlignment="Top" Width="73" Click="buttonSubscribe_Click" Background="#D71A21" Foreground="#DEF5DB" FontWeight="Bold" Height="22"/>
+        <Button x:Name="ButtonUnsubscribe" Content="Unsubscribe" HorizontalAlignment="Left" Margin="490,309,0,0" VerticalAlignment="Top" Width="73" Click="buttonUnsubscribe_Click" Background="#D71A21" Foreground="#DEF5DB" FontWeight="Bold" Height="22"/>
     </Grid>
 </Window>

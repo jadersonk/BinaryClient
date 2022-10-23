@@ -12,7 +12,9 @@ namespace BinaryClient.Model
     {
         public void Init()
         {
-            Add(new Account("3EjSVBls8OS4NqJ"));
+            //Inserir token
+            //Add(new Account("token"));
+            Add(new Account(""));
         }
     }
 
